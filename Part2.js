@@ -1,3 +1,5 @@
+// require fs library
+// require jsnn-file-reader
 var fs = require ("fs");
 var fileReader = require ("./json-file-reader");
 
@@ -13,11 +15,12 @@ var fileReader = require ("./json-file-reader");
 		// var parsed = JSON.parse(data);
 		var countryname = process.argv[2];
 
+
 		function getName (parsed){
 			for (var i=0; i < parsed.length; i++){
 				if(parsed[i].name === countryname){
-					console.log("Country:" + parsed[i].name)
-					console.log("Top Level Domain:" + parsed[i].topLevelDomain)
+					console.log("Country: " + parsed[i].name)
+					console.log("Top Level Domain: " + parsed[i].topLevelDomain)
 				}
 
 
