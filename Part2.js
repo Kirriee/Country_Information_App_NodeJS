@@ -1,22 +1,19 @@
 // require fs library
-// require jsnn-file-reader
+// require module
 var fs = require ("fs");
 var fileReader = require ("./json-file-reader");
 
 
 
-// fs.readFile('./countries.json', 'utf-8', function (error, data){
-// 	if (error){
-// 		console.log("there is an error");
-// 		throw error;
-// 	}
 
 
-		// var parsed = JSON.parse(data);
+
+		// appoint element in array
 		var countryname = process.argv[2];
 
-
+		
 		function getName (parsed){
+			//loop through json file to see if it matches the countryname in the terminal
 			for (var i=0; i < parsed.length; i++){
 				if(parsed[i].name === countryname){
 					console.log("Country: " + parsed[i].name)
@@ -28,8 +25,7 @@ var fileReader = require ("./json-file-reader");
 		}
 
 		fileReader('./countries.json', getName);
-	// });
-
+	
 
 
 
